@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root "hello#index"
+  resources :articles
+  root "articles#index"
+  get "/tagged", to: "articles#tagged", as: :tagged
 end
